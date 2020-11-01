@@ -18,3 +18,5 @@ Pe pagina de upload, client-ul citeste fisiere PDF, pe care le converteste in fi
 Pe pagina de delivery, client-ul poate viziona intreaga lista de documente valide pe care le-a incarcat. Vizibile utilizatorului sunt numele documentului si data de expirare. Nevizibile utilizatorului sunt keywords-urile obtinute de algoritmul de Machine Learning din back-end, care sunt folosite insa la filtarea documentelor pe baza search bar-ului. Documentele care contin nume sau keywords cat mai apropiate de sirul de caractere introdus in search bar vor fi mai aproape de inceput, pe baza unui scor de asemanare intre string-uri. De asemenea, la apasarea butonului de "Deliver", utilizatorul poate introduce o adresa de e-mail, iar la apasarea butonului de "Submit", toate documentele selectate prin checkboxes vor fi arhivate si transmise la adresa de destinatie.
 
 Aplicatia back-end ruleaza un script pe un thread dedicat care verifica daca alerta setata de un utilizator ar trebui activata si le trimite un e-mail in acest caz.
+
+Github Pages URL: https://917-daniel-todasca.github.io/Waterbenders-Dallet/waterbenders/home.html
