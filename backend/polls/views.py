@@ -28,25 +28,6 @@ class IndexView(generic.ListView):
             upload_date__lte=timezone.now()
         ).order_by('-pub_date')[:5]
 
-
-# def vote(request, question_id):
-#     question = get_object_or_404(Question, pk=question_id)
-#     try:
-#         selected_choice = question.choice_set.get(pk=request.POST['choice'])
-#     except (KeyError, Choice.DoesNotExist):
-#         # Redisplay the question voting form.
-#         return render(request, 'polls/detail.html', {
-#             'question': question,
-#             'error_message': "You didn't select a choice.",
-#         })
-#     else:
-#         selected_choice.votes += 1
-#         selected_choice.save()
-#         # Always return an HttpResponseRedirect after successfully dealing
-#         # with POST data. This prevents data from being posted twice if a
-#         # user hits the Back button.
-#         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
-
 @csrf_exempt
 def documents_view(request):
     body = json.loads(request.body)
@@ -54,8 +35,6 @@ def documents_view(request):
     print(email)
     documents = Document.objects.filter(user_email=email)
 
-    # documents = serializers.serialize('json', documents)
-    # return HttpResponse(documents, content_type="text/json-comment-filtered")
     documents = [get_document_dto(doc) for doc in documents]
     return JsonResponse(documents, safe=False)
 
@@ -63,10 +42,6 @@ def documents_view(request):
 @csrf_exempt
 def create_document(request):
     document_request = json.loads(request.body)
-    # user_email = models.CharField(max_length=200)
-    # upload_date = models.DateTimeField('date uploaded')
-    # document_name = models.CharField(max_length=200)
-    # expire_date = models.DateField(null=True, blank=True)
 
     content_link = document_request['content']
 
