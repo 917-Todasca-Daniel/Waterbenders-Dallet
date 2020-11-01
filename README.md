@@ -20,3 +20,11 @@ Pe pagina de delivery, client-ul poate viziona intreaga lista de documente valid
 Aplicatia back-end ruleaza un script pe un thread dedicat care verifica daca alerta setata de un utilizator ar trebui activata si le trimite un e-mail in acest caz.
 
 Github Pages URL: https://917-daniel-todasca.github.io/Waterbenders-Dallet/waterbenders/home.html
+PPT Presentation: https://docs.google.com/presentation/d/19onWzpjombXX4YB9nwIptEGwYEg_lyZ0rADshMBEOcE/edit#slide=id.g571f33f51b_1_318
+
+
+Credits:
+Gabriela Tiperciuc
+Eduard Pauliuc
+Daniel Todasca
+Robert Hostiuc
