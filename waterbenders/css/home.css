@@ -1,0 +1,252 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #616971;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+	background: linear-gradient(to right, #00feff, #7e42bf);
+}
+
+#yourElement{
+  animation-duration: 4s;
+  animation-delay: 1s;
+}
+
+.navbartop{
+  font-size: 1.1rem;
+  padding: 0.8rem;
+  color: white;
+  background: black;
+  width: 100vw;
+}
+
+#singin{
+  opacity: 1;
+  display: block;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -ms-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  transition: display 5s ease-in-out;
+  width: 5rem;
+  margin-right: 2rem;
+  font-size: 1.1rem;
+}
+
+#singin.fade{
+  opacity: 0;
+  display: none;
+}
+
+.navbar-brand{
+  margin-left: 1rem;
+}
+
+.formatpage{
+  position: relative;
+  height: 8rem;
+  width: 30rem;
+}
+
+.imgowner{
+  height: 80%;
+  width: 30%;
+  margin: 2%; 
+}
+
+.txtowner{
+  margin: 4rem 2rem 4rem 1rem;
+  vertical-align: middle;
+  color: red;
+}
+
+.navbar{
+  background-color:transparent;
+}
+
+.diplomaowner{
+  margin: 4rem 0 0 2rem;
+  padding-bottom: 0.3rem;
+  border-bottom: solid 0.1rem white;
+}
+
+.indexprop{
+  z-index: 1000000;
+  margin-left: 20rem;
+}
+
+.indexpropbutton{
+  z-index: 1000000;
+  width: 4rem;
+  font-size: 0.8rem;
+  background: linear-gradient(aqua, blue);
+}
+
+.marginleftimg{
+  margin-left: 1em!important;
+}
+
+.heightadjust{
+  height: 12rem;
+  border-radius: 1rem;
+}
+
+.hoverscale{
+  height: 60%;
+  width: 75%;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.container{
+  width: 150rem;
+}
+
+
+.brk-btn {
+  position: relative;
+  background: none;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0.2em solid black;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin: 2rem;
+  margin-right: 90rem;
+  opacity: 1!important;
+}
+
+.brk-btn:hover{
+    text-decoration: none;
+    color: black;
+}
+  .brk-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #00feff;
+    height: 0.3em;
+    right: 20%;
+    top: -0.21em;
+    transform: skewX(-45deg);
+    -webkit-transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .brk-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10%;
+    background: #00feff;
+    height: 0.3em;
+    left: 20%;
+    bottom: -0.25em;
+    transform: skewX(45deg);
+    -webkit-transition: all 0.45 cubic-bezier(0.86, 0, 0.07, 1);
+    transition: all 0.45s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  .brk-btn:hover::before {
+      right: 80%;
+    }
+  .brk-btn:hover::after {
+      left: 80%;
+    }
+  
+    .input-group.md-form.form-sm.form-1 input{
+      border: 1px solid #bdbdbd;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+    .input-group.md-form.form-sm.form-2 input {
+      border: 1px solid #bdbdbd;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+    .input-group.md-form.form-sm.form-2 input.red-border {
+      border: 1px solid #ef9a9a;
+    }
+    .input-group.md-form.form-sm.form-2 input.lime-border {
+      border: 1px solid #cddc39;
+    }
+    .input-group.md-form.form-sm.form-2 input.amber-border {
+      border: 1px solid #ffca28;
+    }
+    .input-group{
+      margin: auto 0;
+    }
+
+    .submitbutton{
+      position: absolute;
+      width: 5rem;
+      height: 2rem;
+      margin-left: 5%;
+      margin: 0.5rem;
+    }
+    #submitform{
+      position: absolute;
+      top: 15%;
+      height: 25vh;
+      margin: auto 0;
+      transition: opacity 2s;
+    }
+    
+    .blueborder{
+      border: #00feff solid 0.2rem;
+    }
+    .searcharanj{
+      margin-bottom: 8rem!important;
+    }
+
+  .colortext{
+    color: black;
+  }
+
+  #showpdf{
+    opacity: 0;
+    transition: opacity 2s;
+  }
+
+  .deliveryfinish{
+    display: none;
+  }
+
+.logoimg{
+  height: 35%;
+  width: 30%;
+}
+
+nav{
+  font-size: 1.3rem;
+}
+
+.lead{
+  margin: 2rem;
+  letter-spacing: 1rem;
+  border-top: solid 0.2rem white;
+  padding-top: 0.4rem;
+  color: #B8B8B8;
+}
+.jumbotron{
+  height: 14rem;
+  width: 97rem;
+  margin-top: 8rem;
+  margin-bottom: 20rem;
+}
+
+.distantare{
+  margin-top: 15rem;
+}
+
+.titlelead{
+  letter-spacing: 1rem;
+}

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/home.css"/>
+    <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/animationbackground.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/backend_functions.js"> </script>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<script>
+  if (getSessionData("user_mail") != "") 
+    hideSignIn();
+</script>
+<div id = "popup" style = "bottom:10px;left:10px;display:none;position:fixed;padding-left:10px;padding-top:5px;padding-right:25px;margin-left:10;border-radius:1.5rem;background-color:white;color:black">
+<div class="spinner-border text-info" style = "bottom:0px;left:0px;position:relative" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+<span id = "popup_text">
+PDF loading...
+</span>
+</div>
+
+
+  <body>
+    <div class="animation-pane">
+			<ul class="box-anim">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+        <h1 class="navbartop">
+          Save <a class="typewrite" data-period="1500" data-type='[ "time!", "stress!", "EVERYTHING!!" ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+	<nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="home.html"><img src="img/logojpg-removebg-preview.png" alt="" class="logoimg"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item p-3 active">
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item p-3">
+                    <a class="nav-link" href="delivery.html">Delivery</a>
+                </li>
+                <li class="nav-item p-3">
+                    <a class="nav-link" href="upload.html">Upload</a>
+                </li>
+                
+                <li class="nav-item p-3">
+                    <a class="nav-link btn btn-primary text-white" type="button" data-toggle="modal" data-target="#myModal" id="singin"><span id = "signText">Sign In</span></a>               
+                </li>
+            </ul>
+        </div>
+    <div class="modal" id="myModal">
+            <div class="modal-dialog modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Customer Sign In</h4>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                        <label class="sr-only" for="usrname">E-mail</label>
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="Username" aria-describedby="basic-addon1" id="usernamevalue" value="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-footer btn btn-danger signinbutton" data-dismiss="modal" id = "deleteElement">Ok</button>
+                </div>
+                <script>
+                  let mylogo = document.getElementById('singin');
+                  document.getElementById('deleteElement').onclick = function(){
+                      mylogo.classList.toggle('fade');
+                      setSessionData("user_mail", get_user_mail());
+                  }
+                </script>
+            </div>
+    </div>
+    </nav>
+ 
+    <div class="jumbotron jumbotron-fluidw-75">
+      <div class="container">
+        <h1 class="display-4 titlelead"><b>Dallet</b></h1>
+        <p class="lead"><i>your <sub><</sub>smart<sub>/></sub>  document wallet</i></p>
+      </div>
+    </div>
+    <main>
+      <section class="home-intro">
+      </section>
+      <div class="home-more-stuff" style="background: transparent;">
+        <div class="more-stuff-grid distantare">
+          <img
+            src="img/main1.png"
+            alt=""
+            class="slide-in from-left"
+            style="height: 20rem; width: 23rem;"
+          />
+          <p class="slide-in from-right ">
+            <b style="font-size: 1.2rem;">De ce facem asta?</b> 
+            <br><br>Pentru ca la fel ca si tine, tinem la timpul petrecut cum trebuie. Astfel vrem sa te ajutam sa iti organizezi mai bine documentele
+            si sa profiti de cat mai multe momente facand ce iti place.
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            Am ales automatizarea acestor procese fiind inspirati de organizarea din Estonia
+care de la inceputul secolului
+a pus treptat pe platforma online din ce in ce mai multe procese care consumau atata timp cat si resurse neregenerabile.
+          </p>
+          <img
+            src="img/imgspan.png"
+            alt=""
+            class="slide-in from-right"
+            style="height: 20rem; width: 30rem;"
+          />
+        </div>
+        <div class="more-stuff-grid">
+          <img
+            src="img/img1-removebg-preview.png"
+            alt=""
+            class="slide-in from-left"
+            style="height: 20rem; width: 20rem;"
+          />
+          <p class="slide-in from-right">
+            Pentru a implementa o automatizare a sistemelor de date cu documente, am folosit django, azure si alte platforme de dezvoltare.
+            <br>Aplicatia extrage textul din PDF si identifica cuvintele cheie, cu ajutorul unui model de NLP si folosind algoritmul TextRank. Aplicatia monitorizeaza datele de expirare alte documentele si avertizeaza utilizitaorii prin e-mail cand se aproprie termenul.
+          </p>
+        </div>
+        <div class="more-stuff-grid">
+          <p class="slide-in from-left">
+            Dorim o eficientizare cat mai rapida a lumii virtuale. Prin acest produs dorim sa reducem timpul pe care il pierdem la minim astfel incat sa ne putem axa pe ale noastre.
+          </p>
+          <img
+            src="img/img4-removebg-preview.png"
+            alt=""
+            class="slide-in from-right"
+            style="height: 20rem; width: 20rem;"
+          />
+        </div>
+        
+        </div>
+      </div>
+    </main>
+    <script src="js/observers.js"></script>
+  <script src="js/observers.js"></script>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  //made by vipul mirajkar thevipulm.appspot.com
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+  </script>
+  <script src="js/all.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+  <script>
+	  var wow = new WOW(
+  {
+    boxClass:     'wow',      
+    animateClass: 'animated', 
+    offset:       0,          
+    mobile:       true,       
+    live:         true,       
+    callback:     function(box) {
+      
+    },
+    scrollContainer: null,    
+    resetAnimation: true,     
+  }
+);
+wow.init();
+  </script>
+  </body>
+</html>

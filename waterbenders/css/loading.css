@@ -1,0 +1,32 @@
+.loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100vh;
+  display: flex;
+}
+
+.bgleft{
+  height: 100%; 
+}
+.bgright{
+  height: 100%;
+}
+.fadeOutLeft{
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: -8rem; 
+}
+.fadeOutRight{
+  position: fixed;
+  top: 0;
+  left: 0;
+  left: -8rem;
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid #13247C;
+}
+
